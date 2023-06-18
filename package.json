@@ -6,10 +6,11 @@
 		"start": "vite dev --open",
 		"build": "vite build",
 		"preview": "vite preview",
-		"test": "playwright test",
+		"test:e2e": "playwright test",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-		"test:unit": "vitest",
+		"test": "vitest",
+    "test:watch": "vitest --watch",
 		"lint": "prettier --plugin-search-dir . --check .",
 		"format": "prettier --plugin-search-dir . --write ."
 	},
@@ -17,6 +18,7 @@
 		"@playwright/test": "^1.28.1",
 		"@sveltejs/adapter-auto": "^2.0.0",
 		"@sveltejs/kit": "^1.5.0",
+		"@testing-library/jest-dom": "^5.16.5",
 		"prettier": "^2.8.0",
 		"prettier-plugin-svelte": "^2.8.1",
 		"svelte": "^3.54.0",
@@ -26,5 +28,9 @@
 		"vite": "^4.3.0",
 		"vitest": "^0.25.3"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"@testing-library/svelte": "^3.2.2",
+		"jsdom": "^22.1.0"
+	}
 }
