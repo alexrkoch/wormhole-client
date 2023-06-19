@@ -1,10 +1,10 @@
 :root {
   --background: #202020;
-  --background-alt: #526D82;
-  --foreground-alt: #9DB2BF;
-  --foreground: #B3B3B3;
-  --highlight: #5454C5;
-  --hover: #FFC045;
+  --background-alt: #526d82;
+  --foreground-alt: #9db2bf;
+  --foreground: #b3b3b3;
+  --highlight: #5454c5;
+  --hover: #ffc045;
 }
 
 body {
