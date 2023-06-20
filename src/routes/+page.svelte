@@ -1,9 +1,9 @@
 <script lang="ts">
-	import "../app.css";
-	import CreateRoom from "$lib/CreateRoom.svelte";
-	import JoinRoom from "$lib/JoinRoom.svelte";
+	import '../app.css';
+	import CreateRoom from '$lib/CreateRoom.svelte';
+	import JoinRoom from '$lib/JoinRoom.svelte';
 
-	const buttonText: string = "Create a New Room";
+	const buttonText: string = 'Create a New Room';
 	const roomCodePattern: RegExp = /^[A-Z]{6}$/;
 </script>
 

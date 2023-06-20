@@ -1,6 +1,6 @@
 <script lang="ts">
 	export let roomCodePattern: RegExp = /.*/; // default to match anything
-	$: input = "";
+	$: input = '';
 	$: isValid = roomCodePattern.test(input);
 
 	async function joinRoom(roomCode: string): Promise<void> {
