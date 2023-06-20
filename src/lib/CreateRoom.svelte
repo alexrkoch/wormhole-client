@@ -5,6 +5,6 @@
 	export let buttonText: string;
 </script>
 
-<button on:click={createRoom}>
+<button on:click={createRoom} data-testid="create-room-button">
 	{buttonText}
 </button>

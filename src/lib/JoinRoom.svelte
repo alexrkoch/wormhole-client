@@ -9,6 +9,6 @@
 </script>
 
 <form on:submit|preventDefault={() => joinRoom(input)}>
-	<input type="text" bind:value={input} />
-	<button type="submit" disabled={!isValid}> Join Room </button>
+	<input type="text" bind:value={input} data-testid="room-input" />
+	<button type="submit" disabled={!isValid} data-testid="join-button"> Join Room </button>
 </form>

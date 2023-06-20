@@ -4,23 +4,21 @@ import '@testing-library/jest-dom';
 import JoinRoom from './JoinRoom.svelte';
 
 describe('JoinRoom', () => {
-  
 	it('should accept any pattern if none passed in, enable button', async () => {
 		render(JoinRoom);
-    const inputField = screen.getByRole('textbox');
-    const button = screen.getByRole('button');
-    await fireEvent.input(inputField, {target: {value: "ABC"}});
+		const inputField = screen.getByTestId('room-input');
+		const button = screen.getByTestId('join-button');
+		await fireEvent.input(inputField, { target: { value: 'ABC' } });
 		expect(button).toBeEnabled();
 	});
 
-  it('should enable button only when pattern passed in is met', async () => {
-		render(JoinRoom, {props: {roomCodePattern: /^[A-Z]{6}$/}});
-		const inputField = screen.getByRole('textbox');
-    const button = screen.getByRole('button');
-    await fireEvent.input(inputField, {target: {value: "ABC"}});
+	it('should enable button only when pattern passed in is met', async () => {
+		render(JoinRoom, { props: { roomCodePattern: /^[A-Z]{6}$/ } });
+		const inputField = screen.getByTestId('room-input');
+		const button = screen.getByTestId('join-button');
+		await fireEvent.input(inputField, { target: { value: 'ABC' } });
 		expect(button).toBeDisabled();
-    await fireEvent.input(inputField, {target: {value: "ABCDEF"}});
+		await fireEvent.input(inputField, { target: { value: 'ABCDEF' } });
 		expect(button).toBeEnabled();
 	});
-  
 });

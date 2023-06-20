@@ -1,0 +1,24 @@
+:root {
+	--background: #202020;
+	--background-alt: #526d82;
+	--foreground-alt: #9db2bf;
+	--foreground: #b3b3b3;
+	--highlight: #5454c5;
+	--hover: #ffc045;
+}
+
+body {
+	background-color: var(--background);
+	color: var(--foreground);
+	font-family: Roboto, sans-serif;
+}
+
+button {
+	border-radius: 5px;
+	border: none;
+}
+
+button:hover {
+	background-color: var(--highlight);
+	color: white;
+}
